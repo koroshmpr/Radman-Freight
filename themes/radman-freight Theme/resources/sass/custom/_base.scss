@@ -1,0 +1,132 @@
+html, body {
+  overflow-x: hidden;
+
+}
+
+body {
+  //font-size: 14px;
+  //color: $dark;
+  //background-color: $backg;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.lazy {
+  transition: all 0.3s ease-in-out;
+}
+
+// SCROLL bar styles
+::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: $secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $warning;
+  border-radius: 2rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+}
+.h-200p {
+  height:200px;
+}
+.object-fit {
+  object-fit: cover;
+}
+
+.z--1 {
+  z-index: -1;
+}
+.z-1 {
+  z-index: 6;
+}
+.z-2 {
+  z-index: 7;
+}
+.z-3 {
+  z-index: 8;
+}
+.z-4 {
+  z-index: 9;
+}
+.z-5 {
+  z-index: 10;
+}
+.z-6 {
+  z-index: 11;
+}
+.z-7 {
+  z-index: 12;
+}
+.z-8 {
+  z-index: 13;
+}
+.z-9 {
+  z-index: 14;
+}
+.min-vh-40 {
+  min-height: 40vh;
+}
+
+.vh-50 {
+  height: 50vh;
+}
+.min-vh-50 {
+  min-height: 50vh;
+}
+.vh-75 {
+  height: 65vh;
+}
+.min-vh-75 {
+  min-height: 80vh;
+}
+.min-vh-100 {
+  min-height: 100vh;
+}
+.vh-110 {
+  height: 115vh;
+}
+
+.all-white {
+  h1, h2, h3, h4, h5, h6, p, div, span , a , li {
+    color: white !important
+  }
+}
+.all-dark {
+  h1, h2, h3, h4, h5, h6, p, div, span , a , li {
+    color: black !important
+  }
+}
+.hover-shadow {
+    transition: box-shadow 200ms linear;
+  &:hover {
+      @extend .shadow-sm;
+    }
+}
+.rounded-section {
+  border-radius : $border-radius-lg;
+}
+.rounded-section-bottom {
+  border-bottom-left-radius :  $border-radius-lg;
+  border-bottom-right-radius :  $border-radius-lg;
+}
+.rounded-right {
+  border-top-left-radius :  $border-radius-lg;
+  border-bottom-right-radius :  $border-radius-lg;
+}
+.margin-top {
+  margin-top: -50px;
+  padding-top:100px;
+}
+.rounded-section-top {
+  border-top-left-radius :  $border-radius-lg;
+  border-top-right-radius :  $border-radius-lg;
+}

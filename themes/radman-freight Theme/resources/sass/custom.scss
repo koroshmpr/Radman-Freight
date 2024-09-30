@@ -1,0 +1,298 @@
+// Fonts
+
+//custom classes
+@import "custom/variables";
+
+// Bootstrap
+@import 'modules/bootstrap';
+
+
+//animate.css
+:root {
+  --animate-duration: 1s;
+  --animate-delay: .5s;
+  --animate-repeat: 1;
+  --Iconsax-Size: 20px;
+  --Iconsax-Color: #fff;
+  --services-bg: green;
+}
+
+@import '~animate.css/animate.css';
+
+
+//custom base classes
+@import "custom/base";
+@import "custom/editor";
+
+// header
+@import "custom/header";
+
+
+@import "responsive";
+
+.heroSlider {
+  transition: background-color 200ms;
+}
+a {
+  text-decoration: none !important;
+}
+
+
+//contact form style
+.contact-form {
+  .gform_required_legend {
+    @extend .d-none;
+  }
+
+  input, textarea, select {
+    @extend .rounded, .px-2 ;
+    border: 1px solid #c2c2c2;
+  }
+
+  .top_label {
+    padding: 0 !important;
+
+    input[type=submit] {
+      @extend .btn, .px-5, .py-2, .text-white, .col-lg-4, .col-12, .rounded;
+    }
+  }
+}
+
+//border for grid images
+.grid-border {
+  border-radius: 0;
+
+  :first-child img {
+    border-top-left-radius: 30px;
+
+  }
+
+  :last-child img {
+    border-bottom-right-radius: 30px;
+  }
+}
+
+.grid-border-card {
+  a:first-child {
+    border-top-left-radius: 30px;
+
+  }
+
+  a:last-child {
+    border-bottom-right-radius: 30px;
+  }
+}
+
+
+.social-link {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0px;
+  cursor: pointer;
+  margin: 0px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 300ms;
+}
+
+.social-link:after {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  box-sizing: content-box;
+  box-shadow: 0 0 0 3px #fff;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 300ms;
+}
+
+.social-link:hover {
+  background-color: #fff;
+  @extend .text-danger;
+}
+
+.social-link:hover:after {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+
+.page-item {
+  a.page-numbers, {
+    color: black !important;
+  }
+}
+
+.card-main {
+  &:hover, &:active {
+    .card-info {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .card-info {
+    transition: transform 300ms linear, opacity 300ms ease-out;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+//pagination items
+.page-numbers.current {
+  @extend .bg-danger, .text-white;
+  padding: 2px 9px;
+  border-radius: 100%;
+}
+
+//blog content
+article a {
+  @extend .text-secondary, .fw-bold;
+}
+
+//comment
+.wpd-comment-wrap {
+  border: 1px solid #d6d5d5;
+  border-radius: 30px;
+  padding: 20px;
+  background: #fafffb;
+  margin: 5px 0;
+}
+.comment-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 20px;
+  .comment-form-author , .comment-form-email , .comment-form-url {
+    width: 30%;
+  }
+  .comment-form-comment , .comment-form-cookies-consent {
+    width: 100%;
+  }
+  textarea[id="comment"] , input[type='text'] {
+    border: 1px solid #a9a9a9;
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px;
+  }
+  .form-submit {
+    input[type="submit"] {
+      @extend .btn-primary , .rounded;
+    }
+}
+
+}
+  .comment , .logged-in-as {
+    a {
+      @extend .text-dark
+    }
+  }
+//slider
+.img-slide {
+
+  background-repeat: repeat-y;
+  animation: move 60s forwards linear infinite;
+  height: 5000px;
+  background-position: right!important;
+  background-size: contain!important;
+}
+.image-back {
+  background: white;
+  box-shadow: inset 0 0 10px grey;
+}
+@keyframes move {
+  0% {
+    transform: translateY(-750px);
+  }
+  //50% {
+  //  transform: translateX(-10px);
+  //}
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.ship {
+  left: -15%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  img {
+    width:100%;
+    max-width:350px;
+  }
+}
+
+.animate__item {
+  animation: ride 10s forwards linear infinite alternate;
+}
+
+@keyframes ride {
+  0% {
+    transform: rotate(2deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+//form
+.form-Counseling {
+  input[type=submit], input[type=tel] {
+    @extend .rounded
+  }
+
+  input[type=tel] {
+    @extend .p-3
+  }
+
+  input[type=submit] {
+    @extend .btn-primary, .position-absolute, .end-0, .me-3, .w-25, .top-0, .mt-2;
+    box-sizing: content-box;
+  }
+}
+
+.form-message {
+  input, textarea {
+    background: $primary;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 14px;
+  }
+
+  input[type=submit] {
+    @extend .bg-white, .text-dark
+  }
+}
+
+.form-request {
+  input, textarea {
+    border: unset;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  input[type=submit] {
+    @extend .btn-primary
+  }
+}
